@@ -1,0 +1,13 @@
+# papers.yml
+
+- title: Paper 1
+  authors: Author 1, Author 2
+  year: 2023
+
+- title: Paper 2
+  authors: Author 3, Author 4
+  year: 2022
+
+- title: Paper 3
+  authors: Author 1, Author 5
+  year: 2021

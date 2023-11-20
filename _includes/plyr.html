@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+<div id="player">
+  <video playsinline controls>
+    <source src="{{ include.video }}" type="video/mp4">
+  </video>
+</div>
+<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const player = new Plyr('#player video');
+  });
+</script>

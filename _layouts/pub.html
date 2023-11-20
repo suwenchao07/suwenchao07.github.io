@@ -1,0 +1,71 @@
+---
+layout: default copy
+---
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">学术成果</h1>
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  <img src="{{ site.baseurl }}/assets/images/illustrations/page-title.png" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-pink-round.png" alt="illustrations" class="bg-shape-2">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/dots-cyan.png" alt="illustrations" class="bg-shape-3">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-4">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-5">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/dots-group-cyan.png" alt="illustrations" class="bg-shape-6">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-cyan-lg.png" alt="illustrations" class="bg-shape-7">
+</section>
+<!-- /page title -->
+<section class="section">
+  <div class="container" >
+    <div class="members-single__content">
+
+      <div class="members-single__description container">
+
+        <h4 class="title1">{{ page.title }}</h4>
+        <h5>{{ page.author }}</h5>
+        <h5>
+          {% if page.classification == 'patents' %}{% if post.author == True %}
+          <span class="degree"><b>发明人:</b>{{page.author}}</span><br>
+          <span class="degree"><b>专利号：</b>{{page.PatentNumber}}&emsp;&emsp;&emsp;&emsp;<b>申请日:</b>{{page.ApplicationDate}}</span><br>
+          <span class="degree"><b>授权公告号：</b>{{page.AuthorizationAnnouncementNo}}&emsp;&emsp;&emsp;&emsp;<b>授权公告日：</b>{{page.AuthorizationAnnouncementDate}}</span><br>
+          <span class="degree"><b>多次公布：</b>{{page.Publishedmultipletimes}}</span><br>
+          {% endif %}{% endif %}
+
+          {% if page.classification != 'patents' %}
+	        <span class="degree">{{page.date | date: '%Y-%m-%d'}}</span>
+          {% endif %}
+
+          {% if page.classification == 'presentations' %}
+          <br>
+          <span class="degree"><a href="{{page.link}}">报告链接</a></span>
+          {% endif %}
+          {% if page.classification == 'publications' %}
+          <br>
+          <span class="degree"><a href="{{page.link}}">论文链接</a></span>
+          {% endif %}
+          {% if page.classification == 'patents' %}
+          <br>
+          <span class="degree"><a href="{{page.link}}">专利链接</a></span>
+          {% endif %}
+          {% if page.classification == 'awards' %}
+          <br>
+          <span class="degree"><a href="{{page.link}}">新闻链接</a></span>
+          {% endif %}
+          </h5>
+        <div class="divider divider--members"><span></span></div>
+
+       {{ content }}
+
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+

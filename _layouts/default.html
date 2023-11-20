@@ -1,0 +1,30 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  {% if page.title=='login' %}
+  {% include header-login.html %}
+  {% endif %}
+
+  {% if page.title=='visitor-main' or page.title=='研究成果'%}
+  {% include header-visitor.html %}
+  {% endif %}
+
+  {% if page.title!='visitor-main' and page.title!='login' and page.title!='研究成果' %}
+  {% include header.html %}
+  {% endif %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+
+
+</body>
+
+</html>

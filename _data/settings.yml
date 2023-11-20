@@ -1,0 +1,343 @@
+---
+#-------------------------------
+# General Site Settings
+
+title: 平行仿真
+logo:
+author: themefisher
+description: this is meta description
+email: steve.fruits@email.com
+phone: +880 2544 658 256
+address: 125/A, CA Commercial Area, California, USA
+copyright: Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Getjekyllthemes](https://getjekyllthemes.com)
+
+menu:
+  - { name: 主页, link: "/index copy" }
+  - { name: 团队介绍, link: "/about" }
+  - { name: 新闻动态, link: "/blog" }
+  - { name: 研究成果, link: "/portfolio" }
+  - { name: 在研项目, link: "/project" }
+  - { name: 每周组会, link: "/weekMeeting" }
+  # - { name: 发明专利, link: "/portfolio copy" }
+  # - { name: 获奖情况, link: "/portfolio copy 2" }
+
+menu-visitor:
+  - { name: 主页, link: "/index" }
+  - { name: 研究成果, link: "/portfolio-visitor" }
+  - { name: 在研项目, link: "/project" }
+  - { name: 点击此处登录, link: "/login" }
+#-------------------------------
+# Google Analytics Section
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+google-analytics: # UA-XXXXXX-X
+
+#-------------------------------
+# Comment Section (Disqus)
+
+disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
+
+#-------------------------------
+# Hero Section
+
+hero:
+  hero-title: 实践 <br> &emsp;仿真 <br>&emsp;&emsp;致知
+
+social:
+  - { icon: "ti-facebook", link: "#" }
+  - { icon: "ti-instagram", link: "#" }
+  - { icon: "ti-dribbble", link: "#" }
+  - { icon: "ti-twitter", link: "#" }
+
+#-------------------------------
+# About (Section and Page)
+
+# About Section
+blurb: Parallel Systems Lab（PSL）是一只来自国防科技大学的团队，我们的口号是实践（Practice）、仿真（Simulation）和致知（Learning）。在平行系统思想的指导下，以重大工程为牵引，采用仿真这个第三种认识世界的方法来解决信息-物理-社会系统中的重大问题，并产生新的知识。团队累计承担项目经费超过XXX万元，在《The Innovation》、《IEEE Internet of Things Journal》、《Information Sciences》等顶级期刊上发表论文百余篇。团队目前的研究方向包括了群体感知智能、人机混合智能、基于人工社会的仿真与建模以及自主源搜索等，期待更多有志青年加入我们！
+
+blurb-btn-link: "/about"
+blurb-btn-link-visitor: "/login"
+blurb-btn-name: know more
+
+# About Page
+
+# Work Process Section
+work-process:
+  - title: "邱思航"
+    icon: "assets/images/team/member-3.png"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    position: "副教授"
+  - title: "艾川"
+    icon: "assets/images/team/member-3.png"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    position: "讲师"
+  - title: "朱正秋"
+    icon: "assets/images/team/朱正秋.png"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    position: "讲师"
+# My Team Section
+team:
+  - title: "赵勇"
+    image: "assets/images/team/赵勇.png"
+    designation: "博士生"
+    link: "/zhaoyong"
+  - title: "季雅泰"
+    image: "assets/images/team/季雅泰.png"
+    designation: "博士生"
+    link: "/jiyatai"
+  - title: "杨芳"
+    image: "assets/images/team/杨芳.jpeg"
+    designation: "硕士生"
+  - title: "代云凯"
+    image: "assets/images/team/代云凯.png"
+    designation: "硕士生"
+  - title: "郭润康"
+    image: "assets/images/team/郭润康.jpg"
+    designation: "硕士生"
+  - title: "陈逸"
+    image: "assets/images/team/陈逸.png"
+    designation: "硕士生"
+  - title: "颜梦宇"
+    image: "assets/images/team/颜梦宇.png"
+    designation: "硕士生"
+  - title: "苏文超"
+    image: "assets/images/team/苏文超.jpg"
+    designation: "硕士生"
+
+#-------------------------------
+# Skills Section
+
+skills-title: Skills
+skills:
+  - { name: Web Design, color: "#fdb157", value: "90%" }
+  - { name: Logo Design, color: "#9473e6", value: "60%" }
+  - { name: After Effects, color: "#bdecf6", value: "80%" }
+  - { name: Web App, color: "#ffbcaa", value: "70%" }
+
+#-------------------------------
+# Exprerience Section
+
+experience-title: Experience
+experience:
+  - {
+      name: Junior UX Designer,
+      icon: "icon-1.png",
+      date: "Jan 2007 - Feb 2009",
+      organization: "WEBEX",
+    }
+  - {
+      name: UX & UI Designer,
+      icon: "icon-2.png",
+      date: "Mar 2009 - Aug 2014",
+      organization: "AUGMEDIX",
+    }
+  - {
+      name: Senior UI Designer,
+      icon: "icon-3.png",
+      date: "Sep 2014 - Present",
+      organization: "THEMEFISHER",
+    }
+
+#-------------------------------
+# Education Section
+
+education-title: Education
+education:
+  - {
+      name: Marters in UX Design,
+      date: "2006",
+      organization: "Masassusets Institute of Technology",
+    }
+  - {
+      name: Honours in Fine Arts,
+      date: "2004",
+      organization: "Harvard University",
+    }
+  - {
+      name: Higher Secondary Certificat,
+      date: "2000",
+      organization: "Cardiff School",
+    }
+  - {
+      name: Secondary School Certificate,
+      date: "1998",
+      organization: "Cardiff School",
+    }
+
+#-------------------------------
+# Services Section
+
+services-title: 研究方向
+services:
+  - {
+      name: 群体感知智能,
+      icon: ti-palette,
+      description: "群体感知智能旨在通过构建安全可信环境，利用异构感知节点在信息物理社会三元空间的有机融合，发挥异构感知节点协作性/差异性、计算资源的互补性，实现智能、交互、合作、可信的感知与计算。",
+      active: ,# Add true to select section
+    }
+  - {
+      name: 人工社会,
+      icon: ti-vector,
+      description: "人工社会是一种基于多Agent技术在计算机中模拟人类社会的方法。构建能够产生社会性突发事件应急管理所需要动态情景的人工社会，是平行应急管理的基础，也为定量化研究和分析复杂社会系统提供了一种新途径。",
+      active: true, # Add true to select section
+    }
+  - {
+      name: 寻源算法,
+      icon: ti-panel,
+      description: "源定位问题是人类社会普遍面临的问题，利用无人设备自主地在环境中对泄漏源进行搜索能很好的解决这个问题。因此需要基于群体协同策略、粒子滤波、强化学习等先进技术对源搜索过程进行建模并设计高效的自主源搜索方法来指导无人设备的移动。",
+      active: ,# Add true to select section
+    }
+  - {
+      name: 人机混合智能,
+      icon: ti-panel,
+      description: "利用人类智能和机器智能的差异性和互补性。通过个体智能融合、群体智能融合、智能共同演进等。实现人类和机器智能的共融共生，完成复杂的感知和计算任务。",
+      active: ,# Add true to select section
+    }
+
+#-------------------------------
+# Portfolio (Section and Page)
+
+# Portfolio Home Section
+portfolio-home-items:
+  - image: "assets/images/portfolio/item-1.png"
+    url: "#"
+
+  - image: "assets/images/portfolio/item-2.png"
+    url: "#"
+
+  - image: "assets/images/portfolio/item-3.png"
+    url: "#"
+
+  - image: "assets/images/portfolio/item-4.png"
+    url: "#"
+
+  - image: "assets/images/portfolio/item-5.png"
+    url: "#"
+
+# Portfolio Page
+portfolio-label:
+  - { title: "群智感知", type: "Crowd" }
+  - { title: "人工社会", type: "Artificial" }
+  - { title: "寻源算法", type: "Source" }
+
+portfolio-items:
+  - image: "assets/images/portfolio/item-1.png"
+    url: "#"
+    title: 'Autonomous robotics is driving Perseverance rover’s progress on Mars(Science)'
+    abstract: 'NASA’s Perseverance rover uses robotic autonomy to achieve its mission goals on Mars. Its self-driving autonomous navigation, and OBP capabilities used on Perseverance.'
+    author: 'A. Johnson, S. Aaron, J. Chang, Y. Cheng, J. Montgomery, S. Mohan, S. Schroeder, B. Tweddle, N. Trawny, J. Zheng'
+    portfolio-type:
+      - type: "design"
+      - type: "illustration"
+
+  - image: "assets/images/portfolio/item-2.png"
+    url: "#"
+    title: 'Autonomous robotics is driving Perseverance rover’s progress on Mars(Science)'
+    author: 'A. Johnson, S. Aaron, J. Chang, Y. Cheng, J. Montgomery, S. Mohan, S. Schroeder, B. Tweddle, N. Trawny, J. Zheng'
+    portfolio-type:
+      - type: "branding"
+
+  - image: "assets/images/portfolio/item-3.png"
+    url: "#"
+    title: 'Autonomous robotics is driving Perseverance rover’s progress on Mars(Science)'
+    author: 'A. Johnson, S. Aaron, J. Chang, Y. Cheng, J. Montgomery, S. Mohan, S. Schroeder, B. Tweddle, N. Trawny, J. Zheng'
+    portfolio-type:
+      - type: "illustration"
+
+  - image: "assets/images/portfolio/item-6.png"
+    url: "#"
+    title: 'Autonomous robotics is driving Perseverance rover’s progress on Mars(Science)'
+    author: 'A. Johnson, S. Aaron, J. Chang, Y. Cheng, J. Montgomery, S. Mohan, S. Schroeder, B. Tweddle, N. Trawny, J. Zheng'
+    portfolio-type:
+      - type: "design"
+      - type: "branding"
+
+  - image: "assets/images/portfolio/item-8.png"
+    url: "#"
+    portfolio-type:
+      - type: "illustration"
+
+  - image: "assets/images/portfolio/item-5.png"
+    url: "#"
+    portfolio-type:
+      - type: "design"
+
+  - image: "assets/images/portfolio/item-1.png"
+    url: "#"
+    portfolio-type:
+      - type: "branding"
+
+  - image: "assets/images/portfolio/item-3.png"
+    url: "#"
+    portfolio-type:
+      - type: "design"
+      - type: "illustration"
+      - type: "branding"
+
+  - image: "assets/images/portfolio/item-7.png"
+    url: "#"
+    portfolio-type:
+      - type: "illustration"
+
+#-------------------------------
+# Testimonials Section
+
+testimonial-items:
+  - name: "Jesica Gomez"
+    image: "assets/images/testimonial/client-1.png"
+    designation: "CEO, Funder"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+  - name: "Jesica Gomez"
+    image: "assets/images/testimonial/client-1.png"
+    designation: "CEO, Funder"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+  - name: "Jesica Gomez"
+    image: "assets/images/testimonial/client-1.png"
+    designation: "CEO, Funder"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+#-------------------------------
+# Client Slider Section
+
+client-slider-items:
+  - logo: "assets/images/clients-logo/client-logo-1.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-2.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-3.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-4.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-5.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-1.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-2.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-3.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-4.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-5.png"
+    url: "#"
+
+#-------------------------------
+# Contact Section
+
+contact-title: 登录
+contact-email: steve.fruits@email.com

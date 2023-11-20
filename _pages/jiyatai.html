@@ -1,0 +1,158 @@
+---
+layout: page
+title: 季雅泰
+---
+<!-- portfolio -->
+
+{% include content-box.html %}
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/assets/plugins/content-box/table.css">
+<section class="section"> 
+  <table id="1">
+      <thead>
+          <tr>
+          <th>论文名称</th>
+          <th>作者</th>
+          <th>通讯作者</th>
+          <th>期刊</th>
+          <th>论文检索号</th>
+          <th>发表日期</th>
+          <th>检索状态</th>
+          <th>影响因子</th>
+          <th>数据库来源</th>
+          </tr>
+      </thead>
+      {% for post in site.posts %}{% if post.classification=='publications' %}
+      {% if post.authorFirst=='季雅泰' %}
+      <tbody>
+          <tr>
+          <td>{{post.title}}</td>
+          <td>{{post.authorFirst}}</td>
+          <td>{{post.correspondingAuthor}}</td>
+          <td>{{post.journal}}</td>
+          <td>{{post.searchNumber}}</td>
+          <td>{{post.year}}</td>
+          <td>{{post.searchStatus}}</td>
+          <td>{{post.impactFactors}}</td>
+          <td>{{post.database}}</td>
+          </tr>
+      </tbody>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      <tfoot>
+        <td colspan="9">
+          <button onclick="exportToCSV('1', '论文.csv')">论文导出</button>
+        </td>
+      </tfoot>
+  </table>
+  
+</section>
+
+<section class="section"> 
+  <table width="80%" border="1" cellpadding="2" cellspacing="1" style="word-wrap:break-word;" id="2">
+      <thead>
+          <tr>
+          <th>专利名称</th>
+          <th>作者</th>
+          <th>授权公告号</th>
+          <th>授权公告日</th>
+          <th>专利号</th>
+          <th>授权情况</th>
+          </tr>
+      </thead>
+      {% for post in site.posts %}{% if post.classification=='patents' %}
+      {% if post.author|contains '陈彬' %}
+      <tbody>
+          <tr>
+          <td>{{post.title}}</td>
+          <td>{{post.author}}</td>
+          <td>{{post.AuthorizationAnnouncementNo}}</td>
+          <td>{{post.AuthorizationAnnouncementDate}}</td>
+          <td>{{post.PatentNumber}}</td>
+          <td>{{post.AuthorizationStatus}}</td>
+          </tr>
+      </tbody>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      <tfoot>
+        <td colspan="7">
+          <button onclick="exportToCSV('2', '专利.csv')">专利导出</button>
+        </td>
+      </tfoot>
+  </table>
+
+</section>
+
+<section class="section"> 
+  <table width="80%" border="1" cellpadding="2" cellspacing="1" style="word-wrap:break-word;" id="3">
+      <thead>
+          <tr>
+          <th>奖项名称</th>
+          <th>获奖人</th>
+          <th>获奖级别</th>
+          <th>获奖日期</th>
+          
+          </tr>
+      </thead>
+      {% for post in site.posts %}{% if post.classification=='awards' %}
+      {% if post.author|contains '邱思航' %}
+      <tbody>
+          <tr>
+          <td>{{post.title}}</td>
+          <td>{{post.author}}</td>
+          <td>{{post.type}}</td>
+          <td>{{post.year}}</td>
+          </tr>
+      </tbody>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      <tfoot>
+        <td colspan="7">
+          <button onclick="exportToCSV('3', '奖项.csv')">奖项导出</button>
+        </td>
+      </tfoot>
+  </table>
+  <script>
+    function convertToCSV(tableID) {
+      let csv = [];
+      let headers = [];
+      let rows = document.getElementById(tableID).getElementsByTagName("tr");
+
+      let headerCells = rows[0].getElementsByTagName("th");
+      for (let headerCell of headerCells) {
+        headers.push(headerCell.innerText);
+      }
+      if (headers.length > 0) {
+        csv.push(headers.join(","));
+      }
+
+      for (let i = 1; i < rows.length; i++) {
+        let cells = rows[i].getElementsByTagName("td");
+        let rowData = [];
+
+        for (let cell of cells) {
+          rowData.push(cell.innerText);
+        }
+
+        csv.push(rowData.join(","));
+      }
+
+      return csv.join("\n");
+    }
+
+    function exportToCSV(tableID, filename) {
+      let csv = convertToCSV(tableID);
+
+      let csvData = new Blob(["\ufeff" + csv], { type: 'text/csv;charset=UTF-8' });
+      let csvURL = URL.createObjectURL(csvData);
+      let tempLink = document.createElement("a");
+      tempLink.href = csvURL;
+      tempLink.setAttribute("download", filename);
+      tempLink.click();
+    }
+  </script>
+
+</section>

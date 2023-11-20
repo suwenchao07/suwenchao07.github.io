@@ -1,0 +1,111 @@
+---
+layout: page
+title: 研究成果
+---
+<!-- portfolio -->
+<section class="section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="btn-group btn-group-toggle justify-content-center d-flex" data-toggle="buttons">
+          <label class="btn btn-sm btn-primary active">
+            <input type="radio" name="shuffle-filter" value="all" checked="checked" class="shuffle-filter" />所有
+          </label>
+          <label class="btn btn-sm btn-primary">
+            <select name="shuffle-filter" class="shuffle-filter" id="selectlist">
+              <option value="all" selected>所有</option>
+              <option value="publications">论文</option>
+              <option value="patents" >专利</option>
+              <option value="awards">获奖情况</option>
+              </select>
+          </label>
+          {% for label in site.data.settings.portfolio-label %}
+          <label class="btn btn-sm btn-primary">
+            <input type="radio" name="shuffle-filter" value="{{ label.type }}" class="shuffle-filter"/>{{ label.title }}
+          </label>
+          {% endfor %}
+          <label class="btn btn-sm btn-primary">
+            <input type="submit" name="shuffle-search" value="搜索" id="search-button" class="shuffle-filter"/>
+          </label>
+          <label class="btn btn-sm btn-primary">
+            <input type="text" name="shuffle-input" value="" id="search-input" class="shuffle-filter"/>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row shuffle-wrapper" id="shuffle-wrapper">
+      {% for post in site.posts %}{% if post.classification=='publications' %}
+      <div class="col-lg-12 col-12 mb-5 shuffle-item"  data-groups="[{% for portfolio in post.portfolio-type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ portfolio.type }}&quot;{% endfor %}]">
+        
+        <div class="position-relative rounded hover-wrapper">
+
+          <h4>{{post.title}}&emsp;({{post.year}},{{post.journal}})</h4>
+          <h5>{{post.author}}</h5>
+          <h5>分区：{{post.weight }}&emsp;第一作者：{{post.authorFirst}}&emsp;通讯作者：{{post.correspondingAuthor}}&emsp;检索情况：{{post.searchStatus}}&emsp;检索号：{{post.searchNumber}}</h5>
+          <!-- <h5 class="ak">{{post.excerpt}}</h5> -->
+          
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="{{ post.url | relative_url }}">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if post.classification=='patents' %}
+      <div class="col-lg-12 col-12 mb-5 shuffle-item"  data-groups="[{% for portfolio in post.portfolio-type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ portfolio.type }}&quot;{% endfor %}]">
+        
+        <div class="position-relative rounded hover-wrapper">
+
+          <h4>{{post.title}}({{post.type}})</h4>
+          <h5>{{post.author}}</h5>
+          <!-- <h5 class="ak">{{post.excerpt}}</h5> -->
+          
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="{{ post.url | relative_url }}">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if post.classification=='awards' %}
+      <div class="col-lg-12 col-12 mb-5 shuffle-item"  data-groups="[{% for portfolio in post.portfolio-type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ portfolio.type }}&quot;{% endfor %}]">
+        
+        <div class="position-relative rounded hover-wrapper">
+
+          <h4>{{post.title}}({{post.type}})</h4>
+          <h5>{{post.author}}</h5>
+          <!-- <h5 class="ak">{{post.excerpt}}</h5> -->
+          
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="{{ post.url | relative_url }}">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- /portfolio -->
+
+<!-- clients -->
+<!-- <section class="section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">My Clients</h2>
+      </div>
+    </div>
+    {% include client-slider.html %}
+  </div>
+</section> -->
+
+
+<!-- /clients -->

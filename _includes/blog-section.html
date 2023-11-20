@@ -1,0 +1,18 @@
+<!-- blog -->
+<section class="section">
+  <div id="新闻动态" class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">新闻动态</h2>
+      </div>
+      {% for tag in site.tags %}
+      {% if tag[0]=='news' %}
+      {% for post in tag[1]  %}
+      {% include post.html %}
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- /blog -->

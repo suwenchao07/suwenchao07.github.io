@@ -1,0 +1,30 @@
+{% if site.data.settings.work-process %}
+<!-- Work Process -->
+<section class="section">
+  
+  <div id="指导老师" class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">指导老师</h2>
+      </div>
+      {% for work in site.data.settings.work-process %}
+      <div class="col-md-4 col-sm-6 mb-4 mb-md-0 text-center hover-shadow pt-3">
+        <div class="position-relative rounded hover-wrapper">
+          <img src="{{ work.icon | relative_url }}" class="mb-4" alt="icon">
+          <h4 class="mb-4">{{ work.title }}</h4>
+          <p class="text-light ">{{ work.position }}</p>
+          <p>{{ work.content | markdownify }}</p>
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="{{ work-process-member.link }}">view more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- ./Work Process -->
+{% endif %}
